@@ -1,0 +1,68 @@
+@import "../../../scss/mixin";
+
+.footer {
+  height: 350px;
+  background: #e76712;
+  display: flex;
+  align-items: center;
+
+  .footer__content {
+    color: #fff;
+
+    h1 {
+      font-size: 50px;
+      font-weight: 500;
+      font-family: "Langar";
+      text-align: center;
+    }
+
+    .footer__block {
+      width: 280px;
+      height: 55px;
+      margin: 20px 0;
+      border-radius: 10px;
+      border: 1px solid white;
+      @include flexbox(space-around, center);
+
+      .footer__btn {
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      @include flexbox(center);
+      gap: 50px;
+
+      li {
+        height: 50px;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "inter";
+        cursor: pointer;
+      }
+    }
+
+    .footer__icons {
+      @include flexbox(space-between, center);
+      gap: 40px;
+
+      .footer__hours {
+        @include flexbox(center);
+        gap: 10px;
+
+        .footer__phone {
+          font-size: 30px;
+          cursor: pointer;
+        }
+
+        h2 {
+          font-size: 18px;
+          font-weight: 400;
+          font-family: "inter";
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

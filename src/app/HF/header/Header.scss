@@ -1,0 +1,89 @@
+@import "../../../scss/mixin";
+
+.header {
+  height: 90px;
+  background: #e76712;
+
+  .header__nav {
+    height: 40px;
+    position: relative;
+    @include flexbox(space-between, center);
+
+    ul {
+      @include flexbox(space-between, center);
+      gap: 20px;
+
+      li {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: "inter";
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+
+    .header__icons {
+      @include flexbox(center);
+      gap: 10px;
+
+      .header__add {
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .header__world {
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .header__trans {
+        position: absolute;
+        top: 2pc;
+        right: 15px;
+      }
+
+      .header__icons.active{
+        transform: translateX(100%)
+      }
+    }
+  }
+
+  .header__content {
+    @include flexbox(space-between, center);
+
+    h1 {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 600;
+      font-family: "Langar";
+      cursor: pointer;
+    }
+
+    ul {
+      @include flexbox(space-between, center);
+      gap: 50px;
+
+      li {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "inter";
+        cursor: pointer;
+      }
+    }
+
+    .header__btns {
+      width: 75px;
+      @include flexbox(space-between, center);
+
+      .header__btns-icon {
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
