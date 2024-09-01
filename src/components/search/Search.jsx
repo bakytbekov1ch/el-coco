@@ -16,7 +16,6 @@ function Search() {
             <select name="#" id="">
                 <option value="#">News</option>
                 <option value="#">Stock</option>
-                <option value="#">Used</option>
                 <option value="#">Колдонулган</option>
                 <option value="#">Laptop</option>
             </select>
