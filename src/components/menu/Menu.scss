@@ -1,0 +1,63 @@
+.menu {
+  width: 180px;
+  height: 100vh;
+  border: 1px solid #e76712;
+  box-shadow: 0 0 10px #e76712;
+  border-radius: 0 10px 10px 0;
+  background: white;
+  color: #e76712;
+
+  .menu__content {
+    padding: 20px;
+
+    h1 {
+      color: black;
+      font-size: 20px;
+      font-weight: 500;
+      font-family: "inter";
+      letter-spacing: 0.5px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 15px;
+
+      li {
+        color: #e76712;
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: 400;
+        font-family: "inter";
+        letter-spacing: 0.8px;
+      }
+
+      .menu__menu {
+        padding-left: 15px;
+
+        li {
+          color: #e76712;
+          font-size: 12px;
+          line-height: 20px;
+          font-weight: 400;
+          font-family: "inter";
+
+          span{
+            color: black;
+            font-size: 10px;
+          }
+        }
+      }
+
+      .menu__tr {
+        position: relative;
+
+        .menu__h2 {
+          font-size: 20px;
+          position: absolute;
+          top: 3px;
+          right: 0;
+        }
+      }
+    }
+  }
+}

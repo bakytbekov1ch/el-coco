@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Langar&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Langar&display=swap");
 
 *,
 *::before,
@@ -43,6 +43,22 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1480px;
   margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__end {
+  display: none;
+}
+
+@media (max-width: 440px) {
+  .header__end {
+    width: 100%;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background-color: white;
+  }
 }

@@ -1,6 +1,6 @@
 .translation {
   width: 80px;
-  border-radius: 10px 0 10px 10px;
+  border-radius: 10px;
   border: 1px solid black;
   background: white;
   display: flex;
@@ -12,7 +12,7 @@
     justify-content: space-evenly;
     cursor: pointer;
     width: 60px;
-    height: 20px;
+    height: 23px;
     border: 1px solid black;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.186);

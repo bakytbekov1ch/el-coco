@@ -7,14 +7,22 @@ import Carousel from "../../../components/carousel/Carousel";
 import Translation from "../../../components/translation/Translation";
 import { useClickOutside } from "../../../scss/useRef";
 import Search from "../../../components/search/Search";
+import { TfiMenuAlt } from "react-icons/tfi";
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import Menu from "../../../components/menu/Menu";
 
 function Header() {
-  const [world, setWorld] = useState();
+  const [menu, setMenu] = useState(false);
+  const [world, setWorld] = useState(false);
   const menuRef = useRef(null);
+  const btnRef = useRef(null);
   useClickOutside(menuRef, () => {
-    if (!world) setTimeout(() => setWorld(false), 50);
+    setWorld(false)
+  });
+  
+  useClickOutside(btnRef, () => {
+    setMenu(false);
   });
 
   return (
@@ -71,6 +79,16 @@ function Header() {
             <div className="header__btns">
               <FaCartArrowDown className="header__btns-icon" />
               <MdAccountCircle className="header__btns-icon" />
+              <TfiMenuAlt
+                onClick={() => setMenu(!menu)}
+                className="header__btns-menu"
+              />
+              <div
+                className={`header__menu ${menu ? "active" : ""}`}
+                ref={btnRef}
+              >
+                {menu && <Menu />}
+              </div>
             </div>
           </div>
         </div>

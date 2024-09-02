@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
+import "./Carousel.scss";
 
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,41 +16,8 @@ function Carousel() {
     },
   ];
 
-  const slideStyle = {
-    margin: "10px 0",
-    height: "100%",
-    position: "relative",
-  };
-
   const slideStyles = {
-    width: "100%",
-    height: "150px",
-    borderRadius: "10px",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
     backgroundImage: `url(${slides[currentIndex].url})`,
-  };
-
-  const rightArrow = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    right: "32px",
-    fontSize: "35px",
-    color: "#fff",
-    zIndex: 1,
-    cursor: "pointer",
-  };
-
-  const leftArrow = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    left: "32px",
-    fontSize: "35px",
-    color: "#fff",
-    zIndex: 1,
-    cursor: "pointer",
   };
 
   const goToPrevious = () => {
@@ -65,12 +33,12 @@ function Carousel() {
   };
 
   return (
-    <div style={slideStyle}>
-      <div style={leftArrow} onClick={goToPrevious}>
+    <div className="style">
+      <div className="styleBTn leftArrow" onClick={goToPrevious}>
         <FaCircleArrowLeft />
       </div>
-      <div style={slideStyles}></div>
-      <div style={rightArrow} onClick={goToNext}>
+      <div className="styleSlide" style={slideStyles}></div>
+      <div className="styleBTn rightArrow" onClick={goToNext}>
         <FaCircleArrowRight />
       </div>
     </div>

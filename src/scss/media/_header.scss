@@ -1,0 +1,44 @@
+@media (max-width: 660px) {
+  .header {
+    .header__content {
+      ul {
+        display: none;
+      }
+
+      .header__btns {
+        .header__btns-icon {
+          font-size: 27px;
+        }
+
+        .header__btns-menu {
+          display: block;
+          font-size: 27px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .header {
+    height: 60px;
+    .header__nav {
+      display: none;
+    }
+
+    .header__content {
+      height: 60px;
+      align-items: center;
+
+      ul {
+        display: none;
+      }
+
+      .header__btns {
+        .header__btns-icon {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -2,15 +2,17 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../../app/HF/header/Header";
 import Footer from "../../app/HF/footer/Footer";
+import HeaderMenu from "../headerMenu/HeaderMenu";
 
 function Layout() {
   return (
     <div>
       <Header />
-      <div style={{ marginBottom: "200px" }}>
-        <Outlet />
-      </div>
+      <Outlet />
       <Footer />
+      <div className="header__end">
+        <HeaderMenu />
+      </div>
     </div>
   );
 }

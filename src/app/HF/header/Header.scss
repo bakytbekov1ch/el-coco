@@ -41,12 +41,13 @@
 
       .header__trans {
         position: absolute;
-        top: 2pc;
-        right: 15px;
+        top: 0;
+        right: 5%;
+        z-index: 99;
       }
 
-      .header__icons.active{
-        transform: translateX(100%)
+      .header__icons.active {
+        transform: translateX(100%);
       }
     }
   }
@@ -76,14 +77,36 @@
     }
 
     .header__btns {
-      width: 75px;
       @include flexbox(space-between, center);
+      gap: 10px;
 
       .header__btns-icon {
         color: #fff;
         font-size: 30px;
         cursor: pointer;
       }
+
+      .header__btns-menu {
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+      }
+
+      .header__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+
+        ul {
+          display: block;
+        }
+      }
+    }
+
+    .header__btns.active{
+      transform: translateX(100%);
     }
   }
 }

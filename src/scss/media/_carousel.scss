@@ -1,0 +1,85 @@
+@media (max-width: 768px) {
+  .style {
+    height: 120px;
+
+    .styleBTn {
+      top: 65px;
+      font-size: 25px;
+    }
+
+    .leftArrow {
+      left: 15px;
+    }
+
+    .rightArrow {
+      right: 15px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .style {
+    height: 100px;
+
+    .styleBTn {
+      top: 55px;
+      font-size: 20px;
+    }
+
+    .leftArrow {
+      left: 10px;
+    }
+
+    .rightArrow {
+      right: 10px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .style {
+    margin: 8px 0;
+    height: 70px;
+
+    .styleBTn {
+      top: 40px;
+      font-size: 15px;
+    }
+
+    .styleSlide {
+      border-radius: 5px;
+    }
+
+    .leftArrow {
+      left: 5px;
+    }
+
+    .rightArrow {
+      right: 5px;
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .style {
+    margin: 5px 0;
+    height: 60px;
+
+    .styleBTn {
+      top: 35px;
+      font-size: 13px;
+    }
+
+    .styleSlide {
+      border-radius: 5px;
+    }
+
+    .leftArrow {
+      left: 5px;
+    }
+
+    .rightArrow {
+      right: 5px;
+    }
+  }
+}
