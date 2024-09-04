@@ -8,22 +8,24 @@
   color: #e76712;
 
   .menu__content {
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 13px;
+    padding-right: 5px;
 
     h1 {
-      color: black;
-      font-size: 20px;
-      font-weight: 500;
-      font-family: "inter";
-      letter-spacing: 0.5px;
+      color: #e76712 !important;
+      font-size: 27px !important;
+      font-weight: 500 !important;
+      font-family: "inter" !important;
+      letter-spacing: 0.5px !important;
     }
 
     ul {
       margin-top: 10px;
-      padding-left: 15px;
+      padding-left: 10px;
 
       li {
-        color: #e76712;
+        color: #e76712 !important;
         font-size: 16px;
         line-height: 27px;
         font-weight: 400;
@@ -41,7 +43,7 @@
           font-weight: 400;
           font-family: "inter";
 
-          span{
+          span {
             color: black;
             font-size: 10px;
           }

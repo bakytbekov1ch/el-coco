@@ -3,27 +3,22 @@ import { FaLocationDot } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
 import { FaCartArrowDown } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
-import Carousel from "../../../components/carousel/Carousel";
 import Translation from "../../../components/translation/Translation";
 import { useClickOutside } from "../../../scss/useRef";
-import Search from "../../../components/search/Search";
 import { TfiMenuAlt } from "react-icons/tfi";
-import "./Header.scss";
 import { Link } from "react-router-dom";
 import Menu from "../../../components/menu/Menu";
+import { useTranslation } from "react-i18next";
+import "./Header.scss";
 
 function Header() {
+  const { t } = useTranslation();
   const [menu, setMenu] = useState(false);
   const [world, setWorld] = useState(false);
   const menuRef = useRef(null);
   const btnRef = useRef(null);
-  useClickOutside(menuRef, () => {
-    setWorld(false)
-  });
-  
-  useClickOutside(btnRef, () => {
-    setMenu(false);
-  });
+  useClickOutside(menuRef, () => setWorld(false));
+  useClickOutside(btnRef, () => setMenu(false));
 
   return (
     <>
@@ -31,9 +26,9 @@ function Header() {
         <div className="container">
           <nav className="header__nav">
             <ul>
-              <li>Адрес</li>
-              <li>Как продать</li>
-              <li>Как купить</li>
+              <li>{t("address")}</li>
+              <li>{t("sell")}</li>
+              <li>{t("buy")}</li>
             </ul>
             <div className="header__icons">
               <FaLocationDot className="header__add" />
@@ -41,7 +36,6 @@ function Header() {
                 onClick={() => setWorld(!world)}
                 className="header__world"
               />
-
               <div
                 className={`header__trans ${world ? "active" : ""}`}
                 ref={menuRef}
@@ -52,32 +46,32 @@ function Header() {
           </nav>
           <div className="header__content">
             <h1>el-coco</h1>
-
             <ul>
               <li>
                 <Link style={{ color: "white" }} to="/">
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li>
                 <Link style={{ color: "white" }} to="/about">
-                  About
+                  {t("about")}
                 </Link>
               </li>
               <li>
                 <Link style={{ color: "white" }} to="/contact">
-                  Contact
+                  {t("contact")}
                 </Link>
               </li>
               <li>
                 <Link style={{ color: "white" }} to="/news">
-                  News
+                  {t("new")}
                 </Link>
               </li>
             </ul>
-
             <div className="header__btns">
-              <FaCartArrowDown className="header__btns-icon" />
+              <Link to="/basket">
+                <FaCartArrowDown className="header__btns-icon" />
+              </Link>
               <MdAccountCircle className="header__btns-icon" />
               <TfiMenuAlt
                 onClick={() => setMenu(!menu)}
@@ -91,14 +85,6 @@ function Header() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="header__carousel">
-          <Carousel />
-        </div>
-        <div className="header__search">
-          <Search />
         </div>
       </div>
     </>

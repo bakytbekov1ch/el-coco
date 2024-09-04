@@ -4,11 +4,14 @@ import { IoLogoInstagram } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import { TbClockHour5 } from "react-icons/tb";
 import { FiPhoneCall } from "react-icons/fi";
-
-import "./Footer.scss";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+import "./Footer.scss";
+
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <div className="footer">
       <div className="container">
@@ -26,22 +29,22 @@ function Footer() {
           <ul>
             <li>
               <Link style={{ color: "white" }} to="/">
-                Home
+                {t("home")}
               </Link>
             </li>
             <li>
               <Link style={{ color: "white" }} to="/about">
-                About
+                {t("about")}
               </Link>
             </li>
             <li>
               <Link style={{ color: "white" }} to="/contact">
-                Contact
+                {t("contact")}
               </Link>
             </li>
             <li>
               <Link style={{ color: "white" }} to="/news">
-                News
+                {t("new")}
               </Link>
             </li>
           </ul>
@@ -49,7 +52,7 @@ function Footer() {
           <div className="footer__icons">
             <div className="footer__hours">
               <TbClockHour5 className="footer__phone" />
-              <h2>09:00-18:00 (Без вых)</h2>
+              <h2>09:00-18:00 ({t("weekend")})</h2>
             </div>
 
             <div className="footer__hours">

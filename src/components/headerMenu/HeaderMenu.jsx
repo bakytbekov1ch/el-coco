@@ -20,9 +20,11 @@ function HeaderMenu() {
           <RiMenuSearchLine />
         </Link>
 
-        <Link to="/plus">
-          <BsPlusCircleFill className="headermenu__plus"/>
-        </Link>
+        <div className="hmenu__plus">
+          <Link to="/plus">
+            <BsPlusCircleFill className="headermenu__plus" />
+          </Link>
+        </div>
 
         <Link className="headermenu__icon" to="/basket">
           <MdShoppingCartCheckout />

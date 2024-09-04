@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+// import Basket from "../components/basket/Basket";
+import TitleBasket from "../components/basketTitle/TitleBasket";
 
 function BasketPage() {
   return (
-    <div>BasketPage</div>
-  )
+    <div>
+      {/* <Basket /> */}
+      <TitleBasket />
+    </div>
+  );
 }
 
-export default BasketPage
+export default BasketPage;

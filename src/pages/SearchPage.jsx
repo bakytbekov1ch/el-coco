@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import FirstSearch from "../components/searchFirst/FirstSearch";
+import Block from "../components/block/Block";
 
 function SearchPage() {
   return (
-    <div>SearchPage</div>
-  )
+    <div>
+      <FirstSearch />
+      <Block />
+    </div>
+  );
 }
 
-export default SearchPage
+export default SearchPage;

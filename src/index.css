@@ -52,6 +52,10 @@ body {
   display: none;
 }
 
+.header__search {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 440px) {
   .header__end {
     width: 100%;

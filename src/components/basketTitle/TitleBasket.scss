@@ -1,0 +1,44 @@
+.titlebasket {
+  height: 750px;
+  background: url("https://s3-alpha-sig.figma.com/img/d74b/6d46/887e27e9c00a916be67300bfee8cc42e?Expires=1726444800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iauPgbprernXWN6lrm3MnvGXHLdEWgHa0A3myloba8fLB0JYE95OhaoypsCdScVqu7FJ7qbk1qYqgNjWOtYzYQf0r5WOFyfI8GQ8Gqmzzp7iYvL21MRlNpbIx4vR7voVzwPDDP2U1fyWtXYbGtU8K5N8MPgGkD7b3ccB3nPUfcSAq9AXlazPmb1Z35djAnaLlhcluQpvoFjeAd9BHj-m~N44BnDaiH-3N2PwvGArQGyHH2OcNF7oH8KEo9sEsGaApyOkK7vGaxMEgafiy~tuqLEoRFaugMEJQip~1VGZ9G-8M9NTS~1QPb2tyDN6MgnmpqZ3X4BL613hsf5p~DFinA__")
+    center/cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  .titlebasket__content {
+    h1 {
+      height: 120px;
+      color: white;
+      font-size: 64px;
+      font-weight: 500;
+      font-family: "inter";
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      width: 800px;
+      height: 230px;
+      color: white;
+      font-size: 36px;
+      line-height: 50px;
+      font-weight: 400;
+      font-family: "inter";
+
+      mark {
+        padding: 0 15px;
+        border-radius: 45px 0 45px 0;
+        margin-left: 10px;
+        cursor: pointer;
+        background: #1fff02;
+      }
+    }
+
+    h2 {
+      color: #49dcff;
+      font-size: 40px;
+      font-weight: 500;
+      font-family: "inter";
+    }
+  }
+}

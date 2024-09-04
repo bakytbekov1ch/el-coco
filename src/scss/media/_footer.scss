@@ -1,6 +1,11 @@
 @media (max-width: 660px) {
   .footer {
     .footer__content {
+      ul{
+        li{
+          font-size: 12px;
+        }
+      }
       .footer__icons {
         flex-direction: column;
         gap: 10px;
@@ -27,6 +32,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 0px;
         text-align: center;
+
+        li{
+          font-size: 16px;
+        }
       }
 
       .footer__icons {
