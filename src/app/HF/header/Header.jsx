@@ -72,7 +72,9 @@ function Header() {
               <Link to="/basket">
                 <FaCartArrowDown className="header__btns-icon" />
               </Link>
-              <MdAccountCircle className="header__btns-icon" />
+              <Link to="/auth">
+                <MdAccountCircle className="header__btns-icon" />
+              </Link>
               <TfiMenuAlt
                 onClick={() => setMenu(!menu)}
                 className="header__btns-menu"
