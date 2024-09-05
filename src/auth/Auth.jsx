@@ -10,15 +10,16 @@ function Auth() {
     setValue(str);
   }
 
-
   return (
     <div className="auth">
-      <div className="auth__content">
-        {value === "login" ? (
-          <Login handleClick={handleClick} />
-        ) : (
-          <Forgot handleClick={handleClick} />
-        )}
+      <div className="container">
+        <div className="auth__content">
+          {value === "login" ? (
+            <Login handleClick={handleClick} />
+          ) : (
+            <Forgot handleClick={handleClick} />
+          )}
+        </div>
       </div>
     </div>
   );

@@ -2,5 +2,10 @@
 @import url("./_carousel.scss");
 @import url("./_search.scss");
 @import url("./_titlebasket.scss");
+@import url("./_auth.scss");
+@import url("./_login.scss");
+@import url("./_register.scss");
+@import url("./_forgot.scss");
+@import url("./_code.scss");
 
 @import url("./_footer.scss");

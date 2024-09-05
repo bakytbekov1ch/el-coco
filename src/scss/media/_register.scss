@@ -1,0 +1,159 @@
+/* Ширина экрана 1024px */
+@media (max-width: 1024px) {
+  .register {
+    width: 400px;
+
+    .register__content {
+      h2 {
+        font-size: 22px;
+      }
+
+      h4 {
+        font-size: 12px;
+      }
+
+      .register__inputs {
+        width: 250px;
+
+        input {
+          height: 30px;
+          font-size: 14px;
+        }
+
+        h3 {
+          font-size: 14px;
+        }
+      }
+
+      button {
+        width: 250px;
+        height: 30px;
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 11px;
+      }
+    }
+  }
+
+  /* Ширина экрана 520px */
+  @media (max-width: 520px) {
+    .register {
+      width: 350px;
+
+      .register__content {
+        h2 {
+          font-size: 20px;
+        }
+
+        h4 {
+          font-size: 11px;
+        }
+
+        .register__inputs {
+          width: 220px;
+
+          input {
+            height: 28px;
+            font-size: 13px;
+          }
+
+          h3 {
+            font-size: 13px;
+          }
+        }
+
+        button {
+          width: 220px;
+          height: 28px;
+          font-size: 14px;
+        }
+
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  /* Ширина экрана 440px */
+  @media (max-width: 440px) {
+    .register {
+      width: 300px;
+
+      .register__content {
+        h2 {
+          font-size: 18px;
+        }
+
+        h4 {
+          font-size: 10px;
+        }
+
+        .register__inputs {
+          width: 200px;
+
+          input {
+            height: 26px;
+            font-size: 12px;
+          }
+
+          h3 {
+            font-size: 12px;
+          }
+        }
+
+        button {
+          width: 200px;
+          height: 26px;
+          font-size: 13px;
+        }
+
+        p {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+
+  /* Ширина экрана 320px */
+  @media (max-width: 320px) {
+    .register {
+      width: 250px;
+
+      .register__content {
+        h2 {
+          font-size: 16px;
+        }
+
+        h4 {
+          font-size: 9px;
+        }
+
+        .register__inputs {
+          width: 180px;
+
+          input {
+            height: 24px;
+            font-size: 11px;
+          }
+
+          h3 {
+            font-size: 11px;
+          }
+        }
+
+        button {
+          width: 180px;
+          height: 24px;
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}

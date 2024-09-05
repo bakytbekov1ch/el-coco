@@ -1,0 +1,104 @@
+@media (max-width: 1024px) {
+  .forgot {
+    width: 450px;
+
+    .forgot__content {
+      width: 280px;
+    }
+  }
+}
+
+/* Для экрана 768px */
+@media (max-width: 768px) {
+  .forgot {
+    width: 400px;
+
+    h1 {
+      font-size: 22px;
+    }
+
+    .forgot__content {
+      width: 260px;
+
+      input {
+        height: 30px;
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* Для экрана 520px */
+@media (max-width: 520px) {
+  .forgot {
+    width: 350px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    .forgot__content {
+      width: 240px;
+
+      input {
+        height: 30px;
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* Для экрана 440px */
+@media (max-width: 440px) {
+  .forgot {
+    width: 300px;
+    h1 {
+      font-size: 18px;
+    }
+
+    .forgot__content {
+      width: 220px;
+
+      input {
+        height: 28px;
+        font-size: 13px;
+      }
+
+      button {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/* Для экрана 320px */
+@media (max-width: 320px) {
+  .forgot {
+    width: 270px;
+
+    h1 {
+      font-size: 16px;
+    }
+
+    .forgot__content {
+      width: 200px;
+
+      input {
+        height: 26px;
+        font-size: 12px;
+      }
+
+      button {
+        font-size: 12px;
+      }
+    }
+  }
+}
