@@ -1,0 +1,16 @@
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  height: 100vh;
+  background: url("../assets/images/fon.png") center/cover;
+
+  .auth__content {
+    width: 500px;
+    height: 500px;
+    border: 2px solid white;
+    border-radius: 10px;
+
+  }
+}

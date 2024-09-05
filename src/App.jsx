@@ -9,10 +9,13 @@ import BasketPage from "./pages/BasketPage";
 import PlusPage from "./pages/PlusPage";
 import SearchPage from "./pages/SearchPage";
 import ProfilePage from "./pages/ProfilePage";
+import Auth from "./auth/Auth";
 
 function App() {
   return (
     <Routes>
+      <Route path="/auth" element={<Auth />} />
+
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
