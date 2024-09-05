@@ -1,5 +1,116 @@
-.basket{
-    .basket__content{
-        
+@import "../../scss/mixin";
+
+.basket {
+  .basket__content {
+    display: flex;
+    flex-direction: column;
+
+    .basket__block {
+      @include flexbox(space-evenly, center);
+      border: 1px solid black;
+      border-radius: 5px;
+      margin: 10px 0;
+
+      .basket__images {
+        width: 390px;
+        @include flexbox(center);
+        gap: 10px;
+
+        img {
+          width: 120px;
+          height: 150px;
+          object-fit: contain;
+        }
+
+        h1 {
+          color: black;
+          font-size: 20px;
+          font-weight: 500;
+          font-family: "inter";
+          letter-spacing: 0.2px;
+        }
+
+        p {
+          width: 100%;
+          margin-top: 15px;
+          color: black;
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 16px;
+          font-family: "inter";
+          letter-spacing: 0.2px;
+        }
+      }
+
+      .basket__btn {
+        width: 100%;
+        @include flexbox(space-evenly, end);
+
+        .basket__select {
+          h3 {
+            color: black;
+            font-size: 17px;
+            font-weight: 400;
+            font-family: "inter";
+            letter-spacing: 0.2px;
+          }
+
+          select {
+            margin-top: 10px;
+            width: 100px;
+            height: 35px;
+            border: 1px solid black;
+            border-radius: 3px;
+            font-size: 16px;
+            outline: none;
+          }
+        }
+
+        .basket__guentity {
+          width: 120px;
+          padding: 2px 0;
+          border: 1px solid black;
+          border-radius: 3px;
+          @include flexbox(space-around, center);
+          font-size: 25px;
+
+          .basket__minus {
+            cursor: pointer;
+          }
+
+          h2 {
+            color: black;
+            font-size: 30px;
+            font-weight: 500;
+            font-family: "inter";
+          }
+
+          .basket__plus {
+            cursor: pointer;
+          }
+        }
+
+        h2 {
+          color: black;
+          font-size: 20px;
+          font-weight: 500;
+          font-family: "inter";
+        }
+
+        button {
+          width: 100px;
+          height: 35px;
+          border-radius: 3px;
+          background: none;
+          border: 1px solid black;
+          cursor: pointer;
+        }
+
+        .basket__delete {
+          font-size: 38px;
+          cursor: pointer;
+        }
+      }
     }
+  }
 }

@@ -54,7 +54,9 @@ function Menu() {
           )}
           <li>{t("profile")}</li>
           <li>{t("address")}</li>
-          <li>{t("sell")}</li>
+          <Link to="/auth">
+            <li>{t("sell")}</li>
+          </Link>
           <li>{t("buy")}</li>
           <li>{t("settings")}</li>
           <li style={{ color: "black" }}>{t("exit")}</li>

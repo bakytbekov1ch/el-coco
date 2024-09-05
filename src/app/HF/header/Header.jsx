@@ -27,7 +27,9 @@ function Header() {
           <nav className="header__nav">
             <ul>
               <li>{t("address")}</li>
-              <li>{t("sell")}</li>
+              <Link to="/auth">
+                <li>{t("sell")}</li>
+              </Link>
               <li>{t("buy")}</li>
             </ul>
             <div className="header__icons">
@@ -45,7 +47,9 @@ function Header() {
             </div>
           </nav>
           <div className="header__content">
-            <h1>el-coco</h1>
+            <Link to="/">
+              <h1>el-coco</h1>
+            </Link>
             <ul>
               <li>
                 <Link style={{ color: "white" }} to="/">
@@ -63,7 +67,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link style={{ color: "white" }} to="/news">
+                <Link style={{ color: "white" }} to="/auth">
                   {t("new")}
                 </Link>
               </li>
@@ -72,7 +76,7 @@ function Header() {
               <Link to="/basket">
                 <FaCartArrowDown className="header__btns-icon" />
               </Link>
-              <Link to="/auth">
+              <Link to="/profile">
                 <MdAccountCircle className="header__btns-icon" />
               </Link>
               <TfiMenuAlt

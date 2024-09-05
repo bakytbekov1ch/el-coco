@@ -9,7 +9,9 @@ import BasketPage from "./pages/BasketPage";
 import PlusPage from "./pages/PlusPage";
 import SearchPage from "./pages/SearchPage";
 import ProfilePage from "./pages/ProfilePage";
+import NotfoundPage from "./pages/NotfoundPage";
 import Auth from "./auth/Auth";
+import ProfileOne from "./components/profile-1/ProfileOne";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
 
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
+        <Route path="*" element={<NotfoundPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/news" element={<NewsPage />} />
@@ -25,6 +28,7 @@ function App() {
         <Route path="/plus" element={<PlusPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/a1" element={<ProfileOne />} />
       </Route>
     </Routes>
   );

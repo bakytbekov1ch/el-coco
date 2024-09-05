@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.not {
+  height: 600px;
+  background: black;
+  .notfount {
+    height: 100%;
+    background: url("../../assets/images/notFount.png");
+
+    .notfount__content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .fount__text {
+        width: 500px;
+        text-align: center;
+        h1 {
+          color: rgb(255, 255, 255);
+          font-family: "Roboto";
+          font-size: 80px;
+          font-weight: 700;
+          line-height: 92.5px;
+          letter-spacing: 14.5px;
+        }
+
+        h2 {
+          color: rgb(255, 255, 255);
+          font-family: "Roboto";
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 92.5px;
+          letter-spacing: 2.5px;
+        }
+
+        h4 {
+          color: rgb(161, 161, 170);
+          font-family: "Roboto";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 28px;
+        }
+
+        button {
+          margin-top: 30px;
+          width: 155px;
+          height: 50px;
+          border-radius: 60px;
+          border: 1px solid #7f60f9;
+          background: none;
+          cursor: pointer;
+
+          color: rgb(255, 255, 255);
+          font-family: "Inter";
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+        }
+      }
+
+      .fount__images {
+        position: relative;
+
+        img {
+          width: 600px;
+          height: 100%;
+        }
+
+        .fount__img {
+          position: absolute;
+          width: 300px;
+          height: 280px;
+          top: 28%;
+          left: 8pc;
+        }
+      }
+    }
+  }
+}
