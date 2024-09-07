@@ -1,0 +1,58 @@
+.profiletwo {
+  display: flex;
+  justify-content: center;
+
+  .profiltwo__content {
+    margin-top: 10%;
+    img {
+      width: 100px !important;
+      height: 100px !important;
+    }
+
+    h1 {
+      padding-top: 20px;
+      font-size: 30px;
+      font-weight: 500;
+      font-family: "inter";
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      padding-top: 2px;
+      font-size: 15px;
+      font-weight: 400;
+      font-family: "inter";
+      letter-spacing: 0.2px;
+    }
+  }
+
+  .profiltwo__inputs {
+    margin-top: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input {
+      width: 100%;
+      height: 35px;
+      border: 1px solid #e76712;
+      border-radius: 3px;
+      outline: none;
+      padding-left: 8px;
+      font-size: 18px;
+    }
+
+    button {
+      width: 100%;
+      height: 35px;
+      border-radius: 3px;
+      border: 1px solid #e76712;
+      background: #e76712;
+      color: white;
+      font-size: 18px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+}

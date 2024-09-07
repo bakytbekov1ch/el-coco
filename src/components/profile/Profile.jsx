@@ -1,34 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Profile.scss";
-import { Link } from "react-router-dom";
+import ProfileOne from "../profile-1/ProfileOne";
+import ProfileTwo from "../profile-2/ProfileTwo";
 
 function Profile() {
+  const [value, setValue] = useState("settings");
+
+  function handlename(params) {
+    setValue(params);
+  }
+
   return (
     <div className="profile">
       <div className="container">
         <div className="profile__content">
           <div className="profile__avator">
-            <ul>
-              <li>Kalmamatov Elibek</li>
-              <li>/</li>
-              <li>+996 507 11 669</li>
-            </ul>
+            <div className="profile__btn">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/ru/c/ce/Aang.png"
+                alt=""
+              />
+
+              <div>
+                <h1>Kalmamatov Elibek</h1>
+                <h2>+996 507 111 669</h2>
+              </div>
+            </div>
 
             <nav className="profile__nav">
               <ul>
-                <Link to="/">
-                  <li>Home</li>
-                </Link>
-                <li>BookMark</li>
-                <li>Settings</li>
+                <li onClick={() => handlename("settings")}>BookMark</li>
+                <li onClick={handlename}>Settings</li>
               </ul>
-            </nav>
 
-            <img
-              src="https://upload.wikimedia.org/wikipedia/ru/c/ce/Aang.png"
-              alt=""
-            />
+              {value === "settings" ? <ProfileOne /> : <ProfileTwo />}
+            </nav>
           </div>
         </div>
       </div>

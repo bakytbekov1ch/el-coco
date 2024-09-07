@@ -1,0 +1,251 @@
+// Media Query for 881px
+@media (max-width: 881px) {
+  .profileone {
+    .profileone__btn {
+      .profileone__content {
+        width: 220px;
+        height: 417px;
+        img {
+          height: 250px !important;
+        }
+
+        h1 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 11px;
+        }
+
+        .profileone__btn {
+          h2 {
+            font-size: 14px;
+          }
+        }
+
+        .profileone__buttons {
+          button {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query for 690px
+@media (max-width: 691px) {
+  .profileone {
+    .profileone__btn {
+      .profileone__content {
+        width: 180px;
+        height: 335px;
+
+        img {
+          height: 180px !important;
+        }
+
+        h1 {
+          font-size: 15px;
+        }
+
+        p {
+          font-size: 10px;
+        }
+
+        .profileone__btn {
+          h2 {
+            font-size: 13px;
+          }
+        }
+
+        .profileone__buttons {
+          .profileone__icon {
+            button {
+              height: 30px;
+            }
+          }
+          button {
+            height: 30px;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query for 571px
+@media (max-width: 571px) {
+  .profileone {
+    .profileone__btn {
+      .profileone__content {
+        width: 150px;
+        height: auto;
+
+        img {
+          height: 150px !important;
+        }
+
+        h1 {
+          font-size: 14px;
+        }
+
+        p {
+          font-size: 9px;
+        }
+
+        .profileone__btn {
+          margin: 5px 0;
+          h2 {
+            font-size: 12px;
+          }
+        }
+
+        .profileone__buttons {
+          .profileone__icon {
+            button {
+              font-size: 18px;
+              height: 25px;
+            }
+          }
+          button {
+            height: 25px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query for 481px
+@media (max-width: 481px) {
+  .profileone {
+    .profileone__btn {
+      justify-content: center;
+      .profileone__content {
+        width: 200px;
+        height: 345px;
+
+        img {
+          height: 200px !important;
+        }
+
+        h1 {
+          font-size: 15px;
+        }
+
+        p {
+          font-size: 10px;
+        }
+
+        .profileone__btn {
+          h2 {
+            font-size: 13px;
+          }
+        }
+
+        .profileone__buttons {
+          .profileone__icon {
+            button {
+              height: 30px;
+            }
+          }
+          button {
+            height: 30px;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query for 420px
+@media (max-width: 420px) {
+  .profileone {
+    .profileone__btn {
+        gap: 5px;
+      .profileone__content {
+        width: 180px;
+        height: 313px;
+
+        img {
+          height: 180px !important;
+        }
+
+        h1 {
+          font-size: 15px;
+        }
+
+        p {
+          font-size: 10px;
+        }
+
+        .profileone__btn {
+          h2 {
+            font-size: 13px;
+          }
+        }
+
+        .profileone__buttons {
+          .profileone__icon {
+            button {
+              height: 25px;
+            }
+          }
+          button {
+            height: 25px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query for 380px
+@media (max-width: 381px) {
+  .profileone {
+    .profileone__btn {
+      .profileone__content {
+        width: 150px;
+        height: 282px;
+
+        img {
+          height: 150px !important;
+        }
+
+        .profileone__buttons {
+          .profileone__icon {
+            button {
+              font-size: 15px;
+              height: 20px;
+            }
+          }
+          button {
+            height: 20px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query for 320px
+@media (max-width: 321px) {
+    .profileone {
+      .profileone__btn {
+        .profileone__content {
+          width: 140px;
+          height: 273px;
+  
+          img {
+            height: 140px !important;
+          }
+        }
+      }
+    }
+  }

@@ -21,8 +21,12 @@ function NotFount() {
               </Link>
             </div>
             <div className="fount__images">
-              <img src={ellipse} alt="" />
-              <img className="fount__img" src={image} alt="" />
+              <img style={{ width: "100%" }} src={ellipse} alt="" />
+              <img
+                className="fount__img"
+                src={image}
+                alt=""
+              />
             </div>
           </div>
         </div>

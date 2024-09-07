@@ -1,0 +1,88 @@
+@import "../../scss/mixin";
+
+.profileone {
+  display: flex;
+  justify-content: center;
+
+  .profileone__btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .profileone__content {
+      width: 280px;
+      height: 450px;
+      border-radius: 5px;
+      border: 1px solid #e76712;
+      text-align: start;
+
+      img {
+        width: 100% !important;
+        height: 280px !important;
+        object-fit: cover !important;
+        border-radius: 4px 4px 0 0 !important;
+        border: none !important;
+      }
+
+      h1 {
+        padding: 5px;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "inter";
+        letter-spacing: 0.2px;
+      }
+
+      p {
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: 300;
+        font-family: "inter";
+        letter-spacing: 0.2px;
+      }
+
+      .profileone__btn {
+        margin: 10px 0;
+        padding: 0 5px;
+        @include flexbox(space-between, center);
+
+        h2 {
+          font-size: 15px;
+          font-weight: 400;
+          font-family: "inter";
+        }
+      }
+
+      .profileone__buttons {
+        padding: 0 5px;
+
+        .profileone__icon {
+          gap: 5px;
+          @include flexbox(space-between, center);
+
+          button {
+            width: 100%;
+            height: 35px;
+            font-size: 22px;
+            font-weight: 600;
+            border-radius: 3px;
+            color: white;
+
+            @include flexbox(center);
+            cursor: pointer;
+          }
+        }
+
+        button {
+          width: 100%;
+          height: 35px;
+          margin-bottom: 5px;
+          background: green;
+          color: white;
+          font-size: 22px;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

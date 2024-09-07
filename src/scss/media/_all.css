@@ -1,4 +1,5 @@
 @import url("./_header.scss");
+@import url("./_notfount.scss");
 @import url("./_carousel.scss");
 @import url("./_search.scss");
 @import url("./_titlebasket.scss");
@@ -7,5 +8,7 @@
 @import url("./_register.scss");
 @import url("./_forgot.scss");
 @import url("./_code.scss");
+@import url("./_profileone.scss");
+@import url("./_profiletwo.scss");
 
 @import url("./_footer.scss");
