@@ -3,8 +3,11 @@ import { MdOutlineShoppingCartCheckout } from "react-icons/md";
 import { MdOutlineDeleteSweep } from "react-icons/md";
 
 import "./ProfileOne.scss";
+import { useTranslation } from "react-i18next";
 
 function ProfileOne() {
+  const { t } = useTranslation();
+
   return (
     <div className="profileone">
       <div className="profileone__btn">
@@ -32,7 +35,7 @@ function ProfileOne() {
                 <MdOutlineDeleteSweep />
               </button>
             </div>
-            <button>Сатып Алуу</button>
+            <button>{t("basketbuy")}</button>
           </div>
         </div>
       </div>

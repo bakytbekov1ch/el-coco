@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import "./Profile.scss";
 import ProfileOne from "../profile-1/ProfileOne";
 import ProfileTwo from "../profile-2/ProfileTwo";
+import { useTranslation } from "react-i18next";
 
 function Profile() {
+  const { t } = useTranslation();
   const [value, setValue] = useState("settings");
 
   function handlename(params) {
@@ -30,8 +32,8 @@ function Profile() {
 
             <nav className="profile__nav">
               <ul>
-                <li onClick={() => handlename("settings")}>BookMark</li>
-                <li onClick={handlename}>Settings</li>
+                <li onClick={() => handlename("settings")}>{t("book")}</li>
+                <li onClick={handlename}>{t("settings")}</li>
               </ul>
 
               {value === "settings" ? <ProfileOne /> : <ProfileTwo />}

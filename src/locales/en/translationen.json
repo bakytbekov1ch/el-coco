@@ -18,5 +18,8 @@
   "exit": "Exit",
   "menu": "Menu",
   "text": "Check out the offers on the main page or go to",
-  "title": "Your shopping cart is empty"
+  "title": "Your shopping cart is empty",
+  "memory": "memory",
+  "basketbuy": "Buy",
+  "book": "BookMark"
 }

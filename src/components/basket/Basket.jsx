@@ -4,8 +4,11 @@ import { FaPlus } from "react-icons/fa6";
 import { MdOutlineDeleteSweep } from "react-icons/md";
 
 import "./Basket.scss";
+import { useTranslation } from "react-i18next";
 
 function Basket() {
+  const { t } = useTranslation();
+
   return (
     <div className="basket">
       <div className="container">
@@ -23,6 +26,7 @@ function Basket() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
                   dolore at id tempora.
                 </p>
+                <h2>17 500с</h2>
               </div>
             </div>
 
@@ -30,7 +34,7 @@ function Basket() {
               <h2>17 500с</h2>
 
               <div className="basket__select">
-                <h3>Память</h3>
+                <h3>{t("memory")}</h3>
                 <select name="" id="">
                   <option value="">32гб</option>
                   <option value="">64гб</option>
@@ -46,7 +50,7 @@ function Basket() {
                 <FaPlus className="basket__plus" />
               </div>
 
-              <button>Купить</button>
+              <button>{t("basketbuy")}</button>
 
               <MdOutlineDeleteSweep className="basket__delete" />
             </div>
