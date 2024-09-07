@@ -56,6 +56,13 @@ body {
   margin-bottom: 10px;
 }
 
+.product__home{
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 @media (max-width: 440px) {
   .header__end {
     width: 100%;

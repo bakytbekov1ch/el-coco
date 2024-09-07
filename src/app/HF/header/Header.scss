@@ -92,6 +92,20 @@
         display: none;
       }
 
+      button {
+        height: 32px;
+        padding: 0 10px;
+        background: none;
+        border-radius: 20px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: "inter";
+        border: 1px solid #fff;
+        text-align: center;
+        cursor: pointer;
+      }
+
       .header__menu {
         position: fixed;
         top: 0;

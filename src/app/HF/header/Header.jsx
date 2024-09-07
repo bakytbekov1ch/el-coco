@@ -26,14 +26,16 @@ function Header() {
         <div className="container">
           <nav className="header__nav">
             <ul>
-              <li>{t("address")}</li>
-              <Link to="/auth">
-                <li>{t("sell")}</li>
+              <Link to="/address">
+                <li>{t("address")}</li>
               </Link>
+              <li>{t("sell")}</li>
               <li>{t("buy")}</li>
             </ul>
             <div className="header__icons">
-              <FaLocationDot className="header__add" />
+              <Link to="https://2gis.kg/bishkek/search/%D0%90%D0%B1%D0%B4%D1%8B%D0%BA%D0%B0%D0%B4%D1%8B%D1%80%D0%BE%D0%B2%D0%B0%20204/geo/15763234351028221/74.568431%2C42.862781?m=74.570111%2C42.859597%2F16.11">
+                <FaLocationDot className="header__add" />
+              </Link>
               <TbWorld
                 onClick={() => setWorld(!world)}
                 className="header__world"
@@ -67,7 +69,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link style={{ color: "white" }} to="/auth">
+                <Link style={{ color: "white" }} to="/news">
                   {t("new")}
                 </Link>
               </li>
@@ -76,9 +78,12 @@ function Header() {
               <Link to="/basket">
                 <FaCartArrowDown className="header__btns-icon" />
               </Link>
-              <Link to="/profile">
-                <MdAccountCircle className="header__btns-icon" />
+              <Link to="/auth">
+                <button>{t("login")}</button>
               </Link>
+              {/* <Link to="/profile">
+                <MdAccountCircle className="header__btns-icon" />
+              </Link> */}
               <TfiMenuAlt
                 onClick={() => setMenu(!menu)}
                 className="header__btns-menu"

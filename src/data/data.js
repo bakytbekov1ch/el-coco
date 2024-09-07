@@ -3,8 +3,8 @@ import poco from "../assets/images/poco.jpg";
 import laptop from "../assets/images/laptop.webp";
 import iphone from "../assets/images/iphone.png";
 import samsung from "../assets/images/samsung.jpg";
-import acsia from "../assets/images/acsia.png"
-import newPro from "../assets/images/new.jpg"
+import acsia from "../assets/images/acsia.png";
+import newPro from "../assets/images/new.jpg";
 
 export const BlockMocApi = [
   {
@@ -55,5 +55,20 @@ export const BlockMocApi = [
     name_ru: "Самсунг",
     name_ky: "Самсунг",
     name_en: "Samsung",
+  },
+];
+
+export const AddressData = [
+  {
+    id: 1,
+    name: "Абдыкадырова 204",
+  },
+  {
+    id: 2,
+    name: "Улица Фрунзе, 378 стр",
+  },
+  {
+    id: 3,
+    name: "Байтик Баатыра, 67/1 ",
   },
 ];
