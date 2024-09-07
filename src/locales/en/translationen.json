@@ -22,5 +22,6 @@
   "memory": "memory",
   "basketbuy": "Buy",
   "book": "BookMark",
-  "login": "Login In"
+  "login": "Login In",
+  "cart": "Add to cart"
 }

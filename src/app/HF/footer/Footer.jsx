@@ -55,10 +55,12 @@ function Footer() {
               <h2>09:00-18:00 ({t("weekend")})</h2>
             </div>
 
-            <div className="footer__hours">
-              <FiPhoneCall className="footer__phone" />
-              <h2>+996 (507)-11-16-69</h2>
-            </div>
+            <a style={{color: "white"}} href="tel:+996507111669">
+              <div className="footer__hours">
+                <FiPhoneCall className="footer__phone" />
+                <h2>+996 (507)-11-16-69</h2>
+              </div>
+            </a>
           </div>
         </div>
       </div>

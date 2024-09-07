@@ -4,8 +4,10 @@ const API = "https://669366b5c6be000fa07b6234.mockapi.io/el-coco";
 import "./Product.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Product() {
+  const { t } = useTranslation();
   const [value, setValue] = useState([]);
 
   async function handleClick() {
@@ -47,7 +49,7 @@ function Product() {
               <h4>1 шт</h4>
             </div>
 
-            <button>Add To Cart</button>
+            <button>{t("cart")}</button>
           </div>
         </div>
       ))}

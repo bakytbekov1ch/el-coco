@@ -10,7 +10,7 @@ i18next.use(initReactI18next).init({
     ky: { translation: translationKy },
     en: { translation: translationEn },
   },
-  lng: "en",
+  lng: "ru",
 });
 
 export default i18next;
