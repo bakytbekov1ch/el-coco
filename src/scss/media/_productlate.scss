@@ -1,0 +1,46 @@
+@media (max-width: 872px) {
+  .productlate {
+    .productlate__content {
+      flex-direction: column;
+
+      hr {
+        width: 100%;
+        height: 1px;
+      }
+
+      .productlate__video {
+        width: 100%;
+      }
+
+      .productlate__block {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 446px) {
+  .productlate {
+    .productlate__content {
+      .productlate__video {
+        height: 450px;
+        width: 100%;
+      }
+
+      .productlate__block {
+        width: 100%;
+        height: 100%;
+
+        .productlate__text {
+          height: 70px;
+        }
+
+        .productlate__buttons {
+          button {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
