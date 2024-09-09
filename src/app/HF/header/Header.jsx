@@ -9,6 +9,7 @@ import { TfiMenuAlt } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import Menu from "../../../components/menu/Menu";
 import { useTranslation } from "react-i18next";
+import { BsPlusCircleFill } from "react-icons/bs";
 import "./Header.scss";
 
 function Header() {
@@ -77,6 +78,9 @@ function Header() {
             <div className="header__btns">
               <Link to="/basket">
                 <FaCartArrowDown className="header__btns-icon" />
+              </Link>
+              <Link to="/plus">
+                <BsPlusCircleFill className="header__btns-plus" />
               </Link>
               <Link to="/auth">
                 <button>{t("login")}</button>
