@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
 import { FaCartArrowDown } from "react-icons/fa";
-import { MdAccountCircle } from "react-icons/md";
+// import { MdAccountCircle } from "react-icons/md";
 import Translation from "../../../components/translation/Translation";
 import { useClickOutside } from "../../../scss/useRef";
 import { TfiMenuAlt } from "react-icons/tfi";

@@ -56,11 +56,24 @@ body {
   margin-bottom: 10px;
 }
 
-.product__home{
+.product__home {
   margin: 20px 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+@media (max-width: 486px) {
+  .product__home {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 385px) {
+  .product__home {
+    margin: 0;
+  }
 }
 
 @media (max-width: 440px) {

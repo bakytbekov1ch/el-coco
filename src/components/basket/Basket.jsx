@@ -1,60 +1,82 @@
 import React from "react";
 import { FiMinus } from "react-icons/fi";
-import { FaPlus } from "react-icons/fa6";
+import { FaPlus } from "react-icons/fa";
 import { MdOutlineDeleteSweep } from "react-icons/md";
 
 import "./Basket.scss";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  removeFromCart,
+  increaseQuantity,
+  decreaseQuantity,
+} from "../../reduxe/CreateSlice/CreateSlice";
+import { toast } from "react-toastify";
 
 function Basket() {
   const { t } = useTranslation();
+  const basket = useSelector((state) => state.basket.cart);
+  const dispatch = useDispatch();
+
+  const handleRemove = (id) => {
+    dispatch(removeFromCart(id));
+    toast.success("Ваш продукт был удален из корзины.");
+  };
 
   return (
     <div className="basket">
       <div className="container">
         <div className="basket__content">
-          <div className="basket__block">
-            <div className="basket__images">
-              <img
-                src="https://object.pscloud.io/cms/cms/Photo/img_0_77_4338_0_1.jpg"
-                alt=""
-              />
+          {basket.map((item, index) => (
+            <div key={index} className="basket__block">
+              <div className="basket__images">
+                <img src={item.image} alt={item.name} />
 
-              <div>
-                <h1>Redmi not 12 Pro</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  dolore at id tempora.
-                </p>
-                <h2>17 500с</h2>
+                <div>
+                  <h1>{item.name}</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error dolore at id tempora.
+                  </p>
+                  <h2>{item.price} с</h2>
+                </div>
+              </div>
+
+              <div className="basket__btn">
+                <h2>{item.price} с</h2>
+
+                <div className="basket__select">
+                  <h3>{t("memory")}</h3>
+                  <select name="" id="">
+                    <option value="">32 гб</option>
+                    <option value="">64 гб</option>
+                    <option value="">128 гб</option>
+                    <option value="">256 гб</option>
+                    <option value="">512 гб</option>
+                  </select>
+                </div>
+
+                <div className="basket__quantity">
+                  <FiMinus
+                    className="basket__minus"
+                    onClick={() => dispatch(decreaseQuantity(item.id))}
+                  />
+                  <h2>{item.quantity}</h2>
+                  <FaPlus
+                    className="basket__plus"
+                    onClick={() => dispatch(increaseQuantity(item.id))}
+                  />
+                </div>
+
+                <button>{t("basketbuy")}</button>
+
+                <MdOutlineDeleteSweep
+                  className="basket__delete"
+                  onClick={() => handleRemove(item.id)}
+                />
               </div>
             </div>
-
-            <div className="basket__btn">
-              <h2>17 500с</h2>
-
-              <div className="basket__select">
-                <h3>{t("memory")}</h3>
-                <select name="" id="">
-                  <option value="">32гб</option>
-                  <option value="">64гб</option>
-                  <option value="">128гб</option>
-                  <option value="">256гб</option>
-                  <option value="">512гб</option>
-                </select>
-              </div>
-
-              <div className="basket__guentity">
-                <FiMinus className="basket__minus" />
-                <h2>1</h2>
-                <FaPlus className="basket__plus" />
-              </div>
-
-              <button>{t("basketbuy")}</button>
-
-              <MdOutlineDeleteSweep className="basket__delete" />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

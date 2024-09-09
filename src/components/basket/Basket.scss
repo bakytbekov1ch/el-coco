@@ -1,14 +1,13 @@
 @import "../../scss/mixin";
 
 .basket {
+  margin: 30px 0;
   .basket__content {
     display: flex;
     flex-direction: column;
 
     .basket__block {
       @include flexbox(space-evenly, center);
-      border: 1px solid black;
-      border-radius: 5px;
       margin: 10px 0;
 
       .basket__images {
@@ -17,9 +16,10 @@
         gap: 10px;
 
         img {
-          width: 120px;
+          width: 130px;
           height: 150px;
-          object-fit: contain;
+          object-fit: cover;
+          border-radius: 5px;
         }
 
         h1 {
@@ -75,7 +75,7 @@
           }
         }
 
-        .basket__guentity {
+        .basket__quantity {
           width: 120px;
           padding: 2px 0;
           border: 1px solid black;

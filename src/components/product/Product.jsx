@@ -1,24 +1,44 @@
 import React, { useEffect, useState } from "react";
-const API = "https://669366b5c6be000fa07b6234.mockapi.io/el-coco";
-
-import "./Product.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { addtocart } from "../../reduxe/CreateSlice/CreateSlice";
+
+import "./Product.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+
+const API = "https://669366b5c6be000fa07b6234.mockapi.io/el-coco";
 
 function Product() {
+  const dispatch = useDispatch();
   const { t } = useTranslation();
   const [value, setValue] = useState([]);
+  const cart = useSelector((state) => state.basket.cart);
 
   async function handleClick() {
     try {
       const res = await axios.get(API);
-
       setValue(res.data);
     } catch (error) {
       console.log(error);
     }
   }
+
+  const handleAddtocart = (item) => {
+    const handleClick = cart.find((x) => x.id === item.id);
+
+    if (!handleClick) {
+      dispatch(addtocart(item));
+      toast.success("Товар в корзине.", {
+        autoClose: 1000,
+      });
+    } else {
+      toast.error("Товар уже в корзине.", {
+        autoClose: 1000,
+      });
+    }
+  };
 
   useEffect(() => {
     handleClick();
@@ -29,8 +49,7 @@ function Product() {
       {value.map((item, index) => (
         <div key={index} className="product__content">
           <div className="product__images">
-            <img src={item.image} alt="" />
-
+            <img src={item.image} alt={item.name} />
             <button className="product__button">
               <Link style={{ color: "black" }} to={`/productlate/${item.id}`}>
                 Просмотреть
@@ -49,7 +68,7 @@ function Product() {
               <h4>1 шт</h4>
             </div>
 
-            <button>{t("cart")}</button>
+            <button onClick={() => handleAddtocart(item)}>{t("cart")}</button>
           </div>
         </div>
       ))}
