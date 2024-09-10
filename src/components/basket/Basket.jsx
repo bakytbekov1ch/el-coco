@@ -12,6 +12,7 @@ import {
   decreaseQuantity,
 } from "../../reduxe/CreateSlice/CreateSlice";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function Basket() {
   const { t } = useTranslation();
@@ -23,9 +24,36 @@ function Basket() {
     toast.success("Ваш продукт был удален из корзины.");
   };
 
+  const styleSlice = {
+    display: "flex",
+    alignItems: "center",
+    gap: "5px",
+  };
+
   return (
     <div className="basket">
       <div className="container">
+        <div className="basket__quantity">
+          <div style={styleSlice}>
+            <Link to="/">
+              <h4>Home</h4>
+            </Link>
+            <h3>/</h3>
+            <h4>Basket</h4>
+          </div>
+
+          <h3>
+            Total:
+            <span>0
+              {/* {basket.reduce(
+                (total, item) => total + item.price * item.quantity,
+                0
+              )} */}
+            </span>
+            сом
+          </h3>
+        </div>
+
         <div className="basket__content">
           {basket.map((item, index) => (
             <div key={index} className="basket__block">

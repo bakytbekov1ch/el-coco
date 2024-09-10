@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { BsBookmarkFill } from "react-icons/bs";
 import { addtocart } from "../../reduxe/CreateSlice/CreateSlice";
 
-import "./Product.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import news from "../../assets/images/news.png";
+import "./Product.scss";
 
 const API = "https://669366b5c6be000fa07b6234.mockapi.io/el-coco";
 
@@ -20,7 +22,7 @@ function Product() {
     try {
       const res = await axios.get(API);
       console.log(res.data);
-        
+
       setValue(res.data);
     } catch (error) {
       console.log(error);
@@ -51,7 +53,13 @@ function Product() {
       {value.map((item, index) => (
         <div key={index} className="product__content">
           <div className="product__images">
+
             <img src={item.image} alt={item.name} />
+
+            <BsBookmarkFill className="product__book" />
+            <div className="product__white"></div>
+            <img className="product__news" src={news} alt="" />
+            
             <button className="product__button">
               <Link style={{ color: "black" }} to={`/productlate/${item.id}`}>
                 Просмотреть
