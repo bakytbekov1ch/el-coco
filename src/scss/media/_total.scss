@@ -1,0 +1,56 @@
+@media (max-width: 960px) {
+  .total {
+    .total__block {
+      width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 476px) {
+  .total {
+    .container {
+      .total__block {
+        .total__content {
+          .total__price {
+            h2 {
+              font-size: 20px;
+
+              span {
+                font-size: 10px;
+              }
+            }
+
+            h3 {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 366px) {
+  .total {
+    .container {
+      .total__block {
+        .total__content {
+          .total__price {
+            h2 {
+              height: 28px;
+              font-size: 16px;
+
+              span {
+                font-size: 12px;
+              }
+            }
+
+            h3 {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

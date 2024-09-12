@@ -1,10 +1,10 @@
 import React from "react";
-import Home from "../app/home/Home"
+import Home from "../app/home/Home";
 
-function HomePage() {
+function HomePage({ search, handleSearch }) {
   return (
     <div>
-      <Home />
+      <Home search={search} handleSearch={handleSearch} />
     </div>
   );
 }

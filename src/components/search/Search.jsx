@@ -4,14 +4,14 @@ import { IoMdSearch } from "react-icons/io";
 import "./Search.scss";
 import { useTranslation } from "react-i18next";
 
-function Search() {
+function Search({ search }) {
   const { t } = useTranslation();
 
   return (
     <div className="search">
       <div className="search__content">
         <div className="search__poisck">
-          <input type="text" placeholder={t("search")} />
+          <input onChange={search} type="text" placeholder={t("search")} />
           <IoMdSearch className="search__icon" />
         </div>
         <div className="search__filter">

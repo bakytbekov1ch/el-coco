@@ -1,0 +1,59 @@
+@import "../../scss/mixin";
+
+.total {
+  margin: 20px 0;
+
+  .total__block {
+    width: 50%;
+    height: 150px;
+    background: #e76712;
+    border-radius: 5px;
+    margin: 0 auto;
+
+    .total__content {
+      height: 100px;
+      @include flexbox(space-around, center);
+
+      .total__price {
+        h2 {
+          height: 30px;
+          color: white;
+          font-size: 25px;
+          font-weight: 400;
+          letter-spacing: 0.5px;
+          font-family: Georgia, "Times New Roman", Times, serif;
+
+          span {
+            font-size: 15px;
+            letter-spacing: 0.5px;
+          }
+        }
+
+        h3 {
+          height: 25px;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 400;
+          letter-spacing: 0.5px;
+          font-family: Georgia, "Times New Roman", Times, serif;
+        }
+      }
+    }
+    .total__button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      button {
+        width: 200px;
+        height: 40px;
+
+        font-size: 15px;
+        background: white;
+        letter-spacing: 0.5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}

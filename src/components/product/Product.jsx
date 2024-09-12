@@ -12,7 +12,7 @@ import "./Product.scss";
 
 const API = "https://669366b5c6be000fa07b6234.mockapi.io/el-coco";
 
-function Product() {
+function Product({ items = "" }) {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const [value, setValue] = useState([]);
@@ -22,7 +22,6 @@ function Product() {
     try {
       const res = await axios.get(API);
       console.log(res.data);
-
       setValue(res.data);
     } catch (error) {
       console.log(error);
@@ -44,22 +43,25 @@ function Product() {
     }
   };
 
+  const filterProduct = value.filter((arr) =>
+    arr.name.toUpperCase().includes(items.toUpperCase())
+  );
+
   useEffect(() => {
     handleClick();
   }, []);
 
   return (
     <>
-      {value.map((item, index) => (
+      {filterProduct.map((item, index) => (
         <div key={index} className="product__content">
           <div className="product__images">
-
             <img src={item.image} alt={item.name} />
 
             <BsBookmarkFill className="product__book" />
             <div className="product__white"></div>
             <img className="product__news" src={news} alt="" />
-            
+
             <button className="product__button">
               <Link style={{ color: "black" }} to={`/productlate/${item.id}`}>
                 Просмотреть

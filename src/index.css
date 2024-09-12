@@ -65,7 +65,9 @@ body {
 
 @media (max-width: 486px) {
   .product__home {
+    width: 100%;
     justify-content: center;
+    margin: 0 auto;
     gap: 12px;
   }
 }

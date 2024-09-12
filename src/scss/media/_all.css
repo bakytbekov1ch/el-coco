@@ -13,5 +13,7 @@
 @import url("./_basket.scss");
 @import url("./_product.scss");
 @import url("./_productlate.scss");
+@import url("./_total.scss");
+@import url("./_success.scss");
 
 @import url("./_footer.scss");

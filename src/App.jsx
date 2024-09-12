@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
@@ -14,13 +14,23 @@ import Auth from "./auth/Auth";
 import ProfileOne from "./components/profile-1/ProfileOne";
 import AddressPage from "./pages/AddressPage";
 import ProductLate from "./components/productlate/ProductLate";
+import Pay from "./components/pay/Pay";
 
 function App() {
+  const [search, setSearch] = useState("");
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value.toUpperCase());
+  };
+
   return (
     <Routes>
       <Route path="/auth" element={<Auth />} />
       <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
+        <Route
+          index
+          element={<HomePage handleSearch={handleSearch} search={search} />}
+        />
         <Route path="*" element={<NotfoundPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -30,6 +40,7 @@ function App() {
         <Route path="/search" element={<SearchPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/a1" element={<ProfileOne />} />
+        <Route path="/pay" element={<Pay />} />
         <Route path="/address" element={<AddressPage />} />
         <Route path="/productlate/:id" element={<ProductLate />} />
       </Route>

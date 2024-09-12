@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiMinus } from "react-icons/fi";
 import { FaPlus } from "react-icons/fa";
 import { MdOutlineDeleteSweep } from "react-icons/md";
@@ -24,36 +24,9 @@ function Basket() {
     toast.success("Ваш продукт был удален из корзины.");
   };
 
-  const styleSlice = {
-    display: "flex",
-    alignItems: "center",
-    gap: "5px",
-  };
-
   return (
     <div className="basket">
       <div className="container">
-        <div className="basket__quantity">
-          <div style={styleSlice}>
-            <Link to="/">
-              <h4>Home</h4>
-            </Link>
-            <h3>/</h3>
-            <h4>Basket</h4>
-          </div>
-
-          <h3>
-            Total:
-            <span>0
-              {/* {basket.reduce(
-                (total, item) => total + item.price * item.quantity,
-                0
-              )} */}
-            </span>
-            сом
-          </h3>
-        </div>
-
         <div className="basket__content">
           {basket.map((item, index) => (
             <div key={index} className="basket__block">
@@ -96,7 +69,9 @@ function Basket() {
                   />
                 </div>
 
-                <button>{t("basketbuy")}</button>
+                <Link to="/pay">
+                  <button>{t("basketbuy")}</button>
+                </Link>
 
                 <MdOutlineDeleteSweep
                   className="basket__delete"

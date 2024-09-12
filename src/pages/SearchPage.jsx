@@ -1,11 +1,11 @@
 import React from "react";
-import FirstSearch from "../components/searchFirst/FirstSearch";
 import Block from "../components/block/Block";
+import ProductSearch from "../components/productsearch/ProductSearch";
 
 function SearchPage() {
   return (
     <div>
-      <FirstSearch />
+      <ProductSearch />
       <Block />
     </div>
   );
