@@ -16,11 +16,21 @@ import AddressPage from "./pages/AddressPage";
 import ProductLate from "./components/productlate/ProductLate";
 import Pay from "./components/pay/Pay";
 
+const mocapi = "https://669366b5c6be000fa07b6234.mockapi.io/el-coco";
+
 function App() {
   const [search, setSearch] = useState("");
 
   const handleSearch = (e) => {
     setSearch(e.target.value.toUpperCase());
+  };
+
+  const filterhandle = (car) => {
+    const cartItem = mocapi.filter((name) => {
+      return name.categoryAt === car;
+    });
+
+    setSearch(cartItem);
   };
 
   return (
@@ -29,7 +39,14 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route
           index
-          element={<HomePage handleSearch={handleSearch} search={search} />}
+          element={
+            <HomePage
+              setSearch={setSearch}
+              filterhandle={filterhandle}
+              handleSearch={handleSearch}
+              search={search}
+            />
+          }
         />
         <Route path="*" element={<NotfoundPage />} />
         <Route path="/about" element={<AboutPage />} />

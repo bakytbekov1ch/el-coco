@@ -21,7 +21,7 @@ function Product({ items = "" }) {
   async function handleClick() {
     try {
       const res = await axios.get(API);
-      console.log(res.data);
+      
       setValue(res.data);
     } catch (error) {
       console.log(error);

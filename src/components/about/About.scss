@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import "../../scss/mixin";
+
+.about {
+  margin: 30px 0;
+  h1 {
+    height: 40px;
+    color: rgb(0, 0, 255);
+    font-family: "Karla";
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  p {
+    color: rgb(0, 0, 0);
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .about__content {
+    margin-top: 8%;
+    @include flexbox(space-evenly, start);
+
+    .about__text {
+      position: relative;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 50px 20px;
+      animation: slide-left 1.2s;
+
+      .about__logo {
+        height: 60px;
+        color: red;
+        font-family: "Langar";
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 29px;
+      }
+
+      h2 {
+        color: black;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        font-family: "inter";
+      }
+
+      .about__icons {
+        @include flexbox(start, center);
+        gap: 10px;
+        margin: 20px 0;
+        cursor: pointer;
+
+        .about__icon {
+          font-size: 25px;
+        }
+
+        h4 {
+          color: black;
+          font-size: 20px;
+          font-weight: 300;
+          font-family: "inter";
+        }
+      }
+    }
+
+    img {
+      width: 500px;
+      position: relative;
+      animation: slide-image 1s;
+    }
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    left: -20%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide-image {
+  0% {
+    right: -20%;
+  }
+
+  100% {
+    right: 0;
+  }
+}

@@ -15,5 +15,8 @@
 @import url("./_productlate.scss");
 @import url("./_total.scss");
 @import url("./_success.scss");
+@import url("./_contact.scss");
+@import url("./_about.scss");
+@import url("./_human.scss");
 
 @import url("./_footer.scss");

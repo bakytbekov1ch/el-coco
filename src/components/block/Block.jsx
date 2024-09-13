@@ -12,7 +12,7 @@ function Block() {
 
     switch (i18n.language) {
       case "ky":
-        title = res.nam_ky;
+        title = res.name_ky;
         break;
       case "ru":
         title = res.name_ru;

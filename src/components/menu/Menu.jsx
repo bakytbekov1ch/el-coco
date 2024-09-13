@@ -32,13 +32,14 @@ function Menu() {
           </Link>
           <Link to="/basket">
             <li>{t("basket")}</li>
-            <li onClick={() => setIsopen(!isopen)} className="menu__tr">
-              {t("trans")}
-              <div className="menu__h2">
-                <HiChevronDown />
-              </div>
-            </li>
           </Link>
+
+          <li onClick={() => setIsopen(!isopen)} className="menu__tr">
+            {t("trans")}
+            <div className="menu__h2">
+              <HiChevronDown />
+            </div>
+          </li>
           {isopen && (
             <div className="menu__menu">
               <li onClick={() => changelang("ky")}>

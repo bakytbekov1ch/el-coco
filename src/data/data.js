@@ -72,3 +72,57 @@ export const AddressData = [
     name: "Байтик Баатыра, 67/1 ",
   },
 ];
+
+import image from "../assets/svg/phone.svg";
+import email from "../assets/svg/email.svg";
+import address from "../assets/svg/address.svg";
+
+export const ContactData = [
+  {
+    id: 1,
+    image: image,
+    text: "+1 254 8547 956",
+  },
+  {
+    id: 1,
+    image: email,
+    text: "sachdeva@coin.sin",
+  },
+  {
+    id: 1,
+    image: address,
+    text: "3891 Ranchview Dr. Richardson, California 62639",
+  },
+];
+
+import elibek from "../assets/images/eli.jpg"
+import girl from "../assets/images/girl.jpg"
+import boy from "../assets/images/boy.jpg"
+import girl2 from "../assets/images/girl2.jpg"
+
+export const AboutData = [
+  {
+    id: 1,
+    image: elibek,
+    name: "Калмаматов Элибек",
+    phone: "+996 507 111 669",
+  },
+  {
+    id: 1,
+    image: girl2,
+    name: "Улукбек к Алина",
+    phone: "+996 507 111 222",
+  },
+  {
+    id: 1,
+    image: boy,
+    name: "Бакытбек у Али",
+    phone: "+996 705 333 666",
+  },
+  {
+    id: 1,
+    image: girl,
+    name: "Жумабаева Айгүл",
+    phone: "+996 507 555 888",
+  },
+];

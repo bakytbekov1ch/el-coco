@@ -1,10 +1,15 @@
 import React from "react";
 import Home from "../app/home/Home";
 
-function HomePage({ search, handleSearch }) {
+function HomePage({ search, handleSearch, filterhandle, setSearch }) {
   return (
     <div>
-      <Home search={search} handleSearch={handleSearch} />
+      <Home
+        setSearch={setSearch}
+        search={search}
+        handleSearch={handleSearch}
+        filterhandle={filterhandle}
+      />
     </div>
   );
 }

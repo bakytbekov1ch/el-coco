@@ -3,7 +3,7 @@ import Carousel from "../../components/carousel/Carousel";
 import Search from "../../components/search/Search";
 import Product from "../../components/product/Product";
 
-function Home({ search, handleSearch }) {
+function Home({ search, handleSearch, filterhandle, setSearch }) {
   return (
     <div>
       <div className="container">
@@ -11,7 +11,11 @@ function Home({ search, handleSearch }) {
           <Carousel />
         </div>
         <div className="header__search">
-          <Search search={handleSearch} />
+          <Search
+            setSearch={setSearch}
+            filterhandle={filterhandle}
+            search={handleSearch}
+          />
         </div>
 
         <div className="product__home">
