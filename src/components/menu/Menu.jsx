@@ -53,13 +53,21 @@ function Menu() {
               </li>
             </div>
           )}
-          <li>{t("profile")}</li>
-          <li>{t("address")}</li>
-          <Link to="/auth">
+          <Link to="/profile">
+            <li>{t("profile")}</li>
+          </Link>
+          <Link to="/address">
+            <li>{t("address")}</li>
+          </Link>
+          <Link to="/sell">
             <li>{t("sell")}</li>
           </Link>
-          <li>{t("buy")}</li>
-          <li>{t("settings")}</li>
+          <Link to="/buy">
+            <li>{t("buy")}</li>
+          </Link>
+          <Link to="/auth">
+            <li>{t("settings")}</li>
+          </Link>
           <li style={{ color: "black" }}>{t("exit")}</li>
         </ul>
       </div>

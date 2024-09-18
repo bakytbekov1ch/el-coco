@@ -30,8 +30,12 @@ function Header() {
               <Link to="/address">
                 <li>{t("address")}</li>
               </Link>
-              <li>{t("sell")}</li>
-              <li>{t("buy")}</li>
+              <Link to="/sell">
+                <li>{t("sell")}</li>
+              </Link>
+              <Link to="/buy">
+                <li>{t("buy")}</li>
+              </Link>
             </ul>
             <div className="header__icons">
               <Link to="https://2gis.kg/bishkek/search/%D0%90%D0%B1%D0%B4%D1%8B%D0%BA%D0%B0%D0%B4%D1%8B%D1%80%D0%BE%D0%B2%D0%B0%20204/geo/15763234351028221/74.568431%2C42.862781?m=74.570111%2C42.859597%2F16.11">

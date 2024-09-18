@@ -15,6 +15,8 @@ import ProfileOne from "./components/profile-1/ProfileOne";
 import AddressPage from "./pages/AddressPage";
 import ProductLate from "./components/productlate/ProductLate";
 import Pay from "./components/pay/Pay";
+import SellOne from "./components/sellOne/SellOne";
+import Buy from "./components/buy/Buy";
 
 const mocapi = "https://669366b5c6be000fa07b6234.mockapi.io/el-coco";
 
@@ -49,17 +51,19 @@ function App() {
           }
         />
         <Route path="*" element={<NotfoundPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/basket" element={<BasketPage />} />
-        <Route path="/plus" element={<PlusPage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/a1" element={<ProfileOne />} />
-        <Route path="/pay" element={<Pay />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/address" element={<AddressPage />} />
+        <Route path="/basket" element={<BasketPage />} />
+        <Route path="/buy" element={<Buy />} />
+        <Route path="/plus" element={<PlusPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/pay" element={<Pay />} />
         <Route path="/productlate/:id" element={<ProductLate />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/sell" element={<SellOne />} />
       </Route>
     </Routes>
   );
