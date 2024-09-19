@@ -37,7 +37,6 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/auth" element={<Auth />} />
       <Route path="/" element={<Layout />}>
         <Route
           index
@@ -51,6 +50,7 @@ function App() {
           }
         />
         <Route path="*" element={<NotfoundPage />} />
+        <Route path="/auth" element={<Auth />} />
         <Route path="/a1" element={<ProfileOne />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/address" element={<AddressPage />} />

@@ -1,14 +1,14 @@
 import React from "react";
-import Carousel from "../../components/carousel/Carousel";
 import Search from "../../components/search/Search";
 import Product from "../../components/product/Product";
+import CustomCarousel from "../../components/carousel/Carousel";
 
 function Home({ search, handleSearch, filterhandle, setSearch }) {
   return (
     <div>
       <div className="container">
         <div className="header__carousel">
-          <Carousel />
+          <CustomCarousel />
         </div>
         <div className="header__search">
           <Search

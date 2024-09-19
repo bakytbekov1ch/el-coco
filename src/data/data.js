@@ -95,10 +95,10 @@ export const ContactData = [
   },
 ];
 
-import elibek from "../assets/images/eli.jpg"
-import girl from "../assets/images/girl.jpg"
-import boy from "../assets/images/boy.jpg"
-import girl2 from "../assets/images/girl2.jpg"
+import elibek from "../assets/images/eli.jpg";
+import girl from "../assets/images/girl.jpg";
+import boy from "../assets/images/boy.jpg";
+import girl2 from "../assets/images/girl2.jpg";
 
 export const AboutData = [
   {
@@ -124,5 +124,23 @@ export const AboutData = [
     image: girl,
     name: "Жумабаева Айгүл",
     phone: "+996 507 555 888",
+  },
+];
+
+export const CarouselData = [
+  {
+    id: 1,
+    image:
+      "https://static-basket-01.wbbasket.ru/vol1/crm-bnrs/bners1/school_last_2880.webp",
+  },
+  {
+    id: 1,
+    image:
+      "https://static-basket-01.wbbasket.ru/vol1/crm-bnrs/bners1/del_2880_kg.webp",
+  },
+  {
+    id: 1,
+    image:
+      "https://static-basket-01.wbbasket.ru/vol1/crm-bnrs/bners1/2school_2880_nout.webp",
   },
 ];
