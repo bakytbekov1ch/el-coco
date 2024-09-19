@@ -3,7 +3,6 @@ import { CarouselData } from "../../data/data";
 import { Carousel } from "antd";
 const contentStyle = {
   color: "#fff",
-  lineHeight: "160px",
   textAlign: "center",
   background: "#364d79",
 };

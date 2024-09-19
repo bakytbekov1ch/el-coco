@@ -89,9 +89,9 @@ function Header() {
               <Link to="/auth">
                 <button>{t("login")}</button>
               </Link>
-              <Link to="/profile">
+              {/* <Link to="/profile">
                 <MdAccountCircle className="header__btns-icon" />
-              </Link>
+              </Link> */}
               <TfiMenuAlt
                 onClick={() => setMenu(!menu)}
                 className="header__btns-menu"
