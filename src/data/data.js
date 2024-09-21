@@ -144,3 +144,30 @@ export const CarouselData = [
       "https://static-basket-01.wbbasket.ru/vol1/crm-bnrs/bners1/2school_2880_nout.webp",
   },
 ];
+
+export const BuyProductData = [
+  {
+    id: 1,
+    title: "iPhone 12 mini",
+  },
+  {
+    id: 2,
+    title: "32 000",
+  },
+  {
+    id: 3,
+    title: "Калмаматов Элибек",
+  },
+  {
+    id: 4,
+    title: "+996 507 11 16 69",
+  },
+  {
+    id: 5,
+    title: "Phone",
+  },
+  {
+    id: 6,
+    title: "Used",
+  },
+];

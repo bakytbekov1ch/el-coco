@@ -14,8 +14,8 @@ function CustomCarousel() {
     <div className="styles">
       <Carousel autoplay>
         {CarouselData.map((item, index) => (
-          <div className="styles__content">
-            <img key={index} style={contentStyle} src={item.image} alt="" />
+          <div key={index} className="styles__content">
+            <img style={contentStyle} src={item.image} alt="" />
           </div>
         ))}
       </Carousel>

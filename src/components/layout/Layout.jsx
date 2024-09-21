@@ -9,7 +9,7 @@ function Layout() {
     <div>
       <Header />
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
       <div className="header__end">
         <HeaderMenu />
       </div>

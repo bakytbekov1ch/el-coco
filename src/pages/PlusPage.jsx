@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import BuyProduct from "../components/buyProduct/BuyProduct";
 
 function PlusPage() {
   return (
-    <div>PlusPage</div>
-  )
+    <div>
+      <BuyProduct />
+    </div>
+  );
 }
 
-export default PlusPage
+export default PlusPage;

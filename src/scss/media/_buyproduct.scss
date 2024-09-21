@@ -1,0 +1,37 @@
+@media (max-width: 829px) {
+  .buyproduct {
+    .buyproduct__content {
+      .buyproduct__buy {
+        width: 100%;
+
+        p {
+          line-height: 13px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .buyproduct {
+    .buyproduct__content {
+      flex-direction: column-reverse;
+      gap: 30px;
+
+      .buyproduct__buy {
+        width: 100%;
+
+        h2 {
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
