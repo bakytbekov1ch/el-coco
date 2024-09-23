@@ -14,6 +14,11 @@ function ProductSearch() {
   const { t } = useTranslation();
   const [product, setProduct] = useState([]);
   const [isma, setIsma] = useState("");
+  const [ispopup, setPopup] = useState(false);
+
+  const handlePopup = () => {
+    setPopup(!ispopup);
+  };
 
   const handleIsma = (e) => {
     setIsma(e.target.value.toUpperCase());
@@ -45,45 +50,49 @@ function ProductSearch() {
           <IoMdSearch className="productsearch__icon" />
         </div>
         <div className="productsearch__content">
-          {filterProduct.slice(0, 6).map((item, index) => (
-            <div key={index} className="product__content">
-              <div className="product__images">
-                <img src={item.image} alt={item.name} />
+          {filterProduct
+            .slice(0, ispopup ? product.length : 2)
+            .map((item, index) => (
+              <div key={index} className="product__content">
+                <div className="product__images">
+                  <img src={item.image} alt={item.name} />
 
-                <BsBookmarkFill className="product__book" />
-                <div className="product__white"></div>
-                <img className="product__news" src={news} alt="" />
+                  <BsBookmarkFill className="product__book" />
+                  <div className="product__white"></div>
+                  <img className="product__news" src={news} alt="" />
 
-                <button className="product__button">
-                  <Link
-                    style={{ color: "black" }}
-                    to={`/productlate/${item.id}`}
-                  >
-                    Просмотреть
-                  </Link>
-                </button>
-              </div>
-
-              <div className="product__text">
-                <h1>{item.name}</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Debitis, nam..
-                </p>
-                <div className="product__price">
-                  <h3>{item.price} сом</h3>
-                  <h4>1 шт</h4>
+                  <button className="product__button">
+                    <Link
+                      style={{ color: "black" }}
+                      to={`/productlate/${item.id}`}
+                    >
+                      Просмотреть
+                    </Link>
+                  </button>
                 </div>
 
-                <button onClick={() => handleAddtocart(item)}>
-                  {t("cart")}
-                </button>
+                <div className="product__text">
+                  <h1>{item.name}</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Debitis, nam..
+                  </p>
+                  <div className="product__price">
+                    <h3>{item.price} сом</h3>
+                    <h4>1 шт</h4>
+                  </div>
+
+                  <button onClick={() => handleAddtocart(item)}>
+                    {t("cart")}
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
 
-        <button className="productsearch__button">Все резултаты</button>
+        <button className="productsearch__button" onClick={handlePopup}>
+          {ispopup ? "Скрыть" : "Все результаты"}
+        </button>
       </div>
     </div>
   );
