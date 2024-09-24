@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FiMinus } from "react-icons/fi";
 import { FaPlus } from "react-icons/fa";
 import { MdOutlineDeleteSweep } from "react-icons/md";
@@ -7,28 +7,27 @@ import "./Basket.scss";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  removeFromCart,
   increaseQuantity,
   decreaseQuantity,
+  RemoveFromProduct
 } from "../../reduxe/CreateSlice/CreateSlice";
-import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
 function Basket() {
   const { t } = useTranslation();
-  const basket = useSelector((state) => state.basket.cart);
+  const { basketItem } = useSelector((state) => state.basket);
   const dispatch = useDispatch();
 
   const handleRemove = (id) => {
-    dispatch(removeFromCart(id));
-    toast.success("Ваш продукт был удален из корзины.");
+    dispatch(RemoveFromProduct(id));
+    alert("Ваш продукт был удален из корзины.");
   };
 
   return (
     <div className="basket">
       <div className="container">
         <div className="basket__content">
-          {basket.map((item, index) => (
+          {basketItem.map((item, index) => (
             <div key={index} className="basket__block">
               <div className="basket__images">
                 <img src={item.image} alt={item.name} />

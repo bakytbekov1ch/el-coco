@@ -4,16 +4,18 @@ import { MdOutlineDeleteSweep } from "react-icons/md";
 
 import "./ProfileOne.scss";
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RemoveBook } from "../../reduxe/BookSlice/BookSlice";
 
 function ProfileOne() {
   const { t } = useTranslation();
-  const book = useSelector((state) => state.book.book);
+  const dispatch = useDispatch();
+  const { basketItem } = useSelector((state) => state.book);
 
   return (
     <div className="profileone">
       <div className="profileone__btn">
-        {book.map((item, index) => (
+        {basketItem.map((item, index) => (
           <div key={index} className="profileone__content">
             <img src={item.image} alt="" />
 
@@ -31,7 +33,10 @@ function ProfileOne() {
                 <button style={{ background: "blue" }}>
                   <MdOutlineShoppingCartCheckout />
                 </button>
-                <button style={{ background: "red" }}>
+                <button
+                  onClick={() => dispatch(RemoveBook(item))}
+                  style={{ background: "red" }}
+                >
                   <MdOutlineDeleteSweep />
                 </button>
               </div>

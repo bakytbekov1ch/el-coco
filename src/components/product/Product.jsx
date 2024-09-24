@@ -12,19 +12,10 @@ import "./Product.scss";
 function Product({ items = [] }) {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const cart = useSelector((state) => state.basket.cart);
-  const book = useSelector((state) => state.book.book);
-
-  function taskClick(item) {
-    const handleClick = book.find((x) => x.id === item.id);
-
-    if (!handleClick) {
-      dispatch(AddToBook(item));
-    }
-  }
+  const { basketItem } = useSelector((state) => state.basket);
 
   const handleAddtocart = (item) => {
-    const handleClick = cart.find((x) => x.id === item.id);
+    const handleClick = basketItem.find((x) => x.id === item.id);
 
     if (!handleClick) {
       dispatch(addtocart(item));
@@ -45,7 +36,7 @@ function Product({ items = [] }) {
           <div className="product__images">
             <img src={item.image} alt={item.name} />
             <BsBookmarkFill
-              onClick={() => taskClick(item)}
+              onClick={() => dispatch(AddToBook(item))}
               className="product__book"
             />
             <div className="product__white"></div>

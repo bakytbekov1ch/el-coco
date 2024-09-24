@@ -4,9 +4,9 @@ import "./Total.scss";
 import { useSelector } from "react-redux";
 
 function Total({ handleItems }) {
-  const cartItems = useSelector((state) => state.basket.cart);
+  const { basketItem } = useSelector((state) => state.basket);
 
-  const totalClick = cartItems.reduce(
+  const totalClick = basketItem.reduce(
     (total, item) => total + item.price * item.quantity,
     0
   );
@@ -21,7 +21,7 @@ function Total({ handleItems }) {
           <div className="total__content">
             <div className="total__price">
               <h2>
-                Товары: {cartItems.length}
+                Товары: {basketItem.length}
                 <span> шт</span>
               </h2>
               <h2>Итого:</h2>
